@@ -1,7 +1,9 @@
-from flask import Flask, render_template, abort, jsonify
+from app import app
+from flask import Flask, render_template, abort, jsonify, Blueprint
 from model import db
 
-app = Flask(__name__)
+# app = Flask(__name__)
+flashcard_views = Blueprint('flashcard_views', __name__)
 
 
 @app.route('/')
