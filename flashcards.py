@@ -1,25 +1,15 @@
-import datetime
-
-from flask import Flask
+from flask import Flask, render_template
+from model import db
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Welcome to my flashcards application!'
+def welcome():  # put application's code here
+    return render_template("welcome.html", message="Here is a message from the template")
 
 
-@app.route('/page_views')
-def get_page_views():  # put application's code here
-    global page_views
-    page_views = page_views + 1
-    return f'This page has been visited: {page_views}'
-
-
-page_views = 0
-
-
-@app.route('/date')
-def get_date():  # put application's code here
-    return f"Welcome to my flashcards application - current date is {datetime.date.today()}"
+@app.route('/card')
+def card_view():
+    card = db[1]
+    return render_template("card.html", card=card)
