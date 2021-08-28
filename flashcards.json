@@ -1,18 +1,22 @@
 [
   {
     "question": "Hello (formal)",
-    "answer": "Dzien dobry"
+    "answer": "Dzien dobry",
+    "index": 0
   },
   {
     "question": "Goodbye (formal)",
-    "answer": "Do widzenia"
+    "answer": "Do widzenia",
+    "index": 1
   },
   {
     "question": "Hello (informal)",
-    "answer": "Czesc"
+    "answer": "Czesc",
+    "index": 2
   },
   {
     "question": "Goodbye (informal)",
-    "answer": "Pa"
+    "answer": "Pa",
+    "index": 3
   }
 ]
