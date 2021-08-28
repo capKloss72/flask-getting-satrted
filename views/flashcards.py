@@ -28,6 +28,6 @@ def api_card_list():  # put application's code here
 def api_card_details(index):
     try:
         card = db[index]
-        return {"card": card}
+        return card
     except IndexError:
         abort(404)
